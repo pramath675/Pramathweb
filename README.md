@@ -1,1 +1,163 @@
-# Pramathweb
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect on WhatsApp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <main class="relative min-h-screen w-full flex items-center justify-center bg-emerald-900 p-4 overflow-hidden">
+      <!-- Background Video -->
+      <div class="absolute top-0 left-0 w-full h-full z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          class="w-full h-full object-cover"
+        >
+          <source
+            src="https://videos.pexels.com/video-files/3129959/3129959-hd.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <!-- Video Overlay for better text contrast -->
+        <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+      </div>
+
+      <!-- Details Toggle Button -->
+      <button
+        id="details-toggle-button"
+        class="absolute top-6 left-6 z-20 p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white"
+        aria-label="Toggle my details"
+        aria-expanded="false"
+      >
+        <svg
+          id="details-toggle-icon"
+          class="w-6 h-6 transform transition-transform duration-300 rotate-0"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          ></path>
+        </svg>
+      </button>
+
+      <!-- Details Panel -->
+      <div
+        id="details-panel"
+        class="absolute top-24 left-6 z-30 w-auto max-w-md bg-white/20 backdrop-blur-lg rounded-2xl shadow-2xl p-6 border border-white/30 text-white transition-all duration-500 ease-in-out opacity-0 -translate-y-10 pointer-events-none"
+      >
+        <h2 class="text-2xl font-bold mb-4 text-left border-b border-white/30 pb-2">
+          My Details
+        </h2>
+        <div class="space-y-3 text-left text-lg">
+          <p>
+            <strong class="font-semibold block text-white/70">Name:</strong>
+            Pramath R Hegde
+          </p>
+          <p>
+            <strong class="font-semibold block text-white/70">College:</strong>
+            Global Academy of Technology
+          </p>
+          <p>
+            <strong class="font-semibold block text-white/70">Email:</strong>
+            pramathgilse2007@gmail.com
+          </p>
+          <p>
+            <strong class="font-semibold block text-white/70">Contact:</strong>
+            ‪+91 8310556594‬
+          </p>
+        </div>
+      </div>
+
+      <!-- Main Content Card -->
+      <div
+        id="main-content-card"
+        class="relative z-10 w-full max-w-md text-center bg-white/20 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border border-white/30 transition-opacity duration-500 ease-in-out opacity-100"
+      >
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-md">
+          Let's Connect
+        </h1>
+        <p class="text-lg text-white/90 mb-8 leading-relaxed drop-shadow-sm">
+          Have a question or want to get in touch? Send me a message on WhatsApp for more information.
+        </p>
+        <div class="flex flex-col items-center gap-4">
+            <!-- WhatsApp Button -->
+            <a
+              href="https://wa.me/918310556594?text=I%20want%20to%20connect%20with%20you%20for%20more%20information."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-8 py-4 bg-white/20 hover:bg-white/30 text-white font-bold text-lg rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-white/50"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.521.074-.792.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+              <span>Contact on WhatsApp</span>
+            </a>
+            <!-- Share Button -->
+            <a
+              href="https://api.whatsapp.com/send?text=Check%20out%20Pramath's%20page%3A%20https%3A%2F%2Fwww.mygreatwebsite.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-6 py-2 bg-transparent hover:bg-white/10 border border-white/50 text-white font-semibold text-sm rounded-full shadow-sm transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-white/50"
+              aria-label="Share on WhatsApp"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+              </svg>
+              <span>Share Page</span>
+            </a>
+        </div>
+      </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('details-toggle-button');
+            const toggleIcon = document.getElementById('details-toggle-icon');
+            const detailsPanel = document.getElementById('details-panel');
+            const mainCard = document.getElementById('main-content-card');
+
+            let isDetailsVisible = false;
+
+            toggleButton.addEventListener('click', () => {
+                isDetailsVisible = !isDetailsVisible;
+                toggleButton.setAttribute('aria-expanded', isDetailsVisible);
+
+                if (isDetailsVisible) {
+                    // Show Details Panel
+                    detailsPanel.classList.remove('opacity-0', '-translate-y-10', 'pointer-events-none');
+                    detailsPanel.classList.add('opacity-100', 'translate-y-0');
+
+                    // Hide Main Card
+                    mainCard.classList.remove('opacity-100');
+                    mainCard.classList.add('opacity-0', 'pointer-events-none');
+
+                    // Rotate Icon
+                    toggleIcon.classList.add('rotate-180');
+                } else {
+                    // Hide Details Panel
+                    detailsPanel.classList.add('opacity-0', '-translate-y-10', 'pointer-events-none');
+                    detailsPanel.classList.remove('opacity-100', 'translate-y-0');
+                    
+                    // Show Main Card
+                    mainCard.classList.add('opacity-100');
+                    mainCard.classList.remove('opacity-0', 'pointer-events-none');
+                    
+                    // Rotate Icon back
+                    toggleIcon.classList.remove('rotate-180');
+                }
+            });
+        });
+    </script>
+  </body>
+</html>
